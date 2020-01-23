@@ -13,10 +13,10 @@
 </template>
 
 <script>
-import mousePaperActions from '../mixins/mousePaperActions'
+import drawActions from '../mixins/drawActions'
 
 export default {
-  mixins: [mousePaperActions],
+  mixins: [drawActions],
   props: {
     'circleDiameter': {
       type: Number,
