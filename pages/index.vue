@@ -3,7 +3,12 @@
     <v-container fluid>
       <v-row dense>
         <customCanvas :circleDiameter="200" />
-        <colorSelector />
+        <v-col
+          :cols="4"
+        >
+          <redoUndone />
+          <colorSelector />
+        </v-col>
       </v-row>
     </v-container>
   </v-layout>
@@ -12,10 +17,12 @@
 <script>
 import customCanvas from '@/components/customCanvas'
 import colorSelector from '@/components/colorSelector'
+import redoUndone from '@/components/redoUndone'
 
 export default {
   components: {
     customCanvas,
+    redoUndone,
     colorSelector
   }
 }
