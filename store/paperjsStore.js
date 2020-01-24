@@ -10,10 +10,10 @@ export const getters = {
 }
 
 export const actions = {
-  setCanvasProject ({ commit }) {
+  setCanvasProject () {
     paper.setup(document.getElementById('paint_project_canvan'))
   },
-  initPath ({ state, commit, dispatch }, newPointEvent) {
+  initPath ({ dispatch }, newPointEvent) {
     const path = new paper.Path()
     path.strokeColor = 'blue'
     dispatch('setNewPathPoint', newPointEvent)
