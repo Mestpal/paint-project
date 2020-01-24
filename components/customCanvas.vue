@@ -1,16 +1,19 @@
 <template>
-  <v-card>
-    <v-card-text>
-      <canvas
-        id="paint_project_canvan"
-        @mousedown="updateDrawPathAction($event)"
-        @mouseup="test('mouse released')"
-        style = "height: 100%; width: 100%; background-color: white"
-      >
-        {{ circleDiameter }}
-      </canvas>
-    </v-card-text>
-  </v-card>
+  <v-col :cols="8">
+    <v-card>
+      <v-card-text>
+        <canvas
+          id="paint_project_canvan"
+          @mousedown="createDrawPathAction($event)"
+          @mousemove="updateDrawPathAction($event)"
+          @mouseup="closeDrawPathAction($event)"
+          style = "height: 600px; width: 100%; background-color: white"
+        >
+          {{ circleDiameter }}
+        </canvas>
+      </v-card-text>
+    </v-card>
+  </v-col>
 </template>
 
 <script>
