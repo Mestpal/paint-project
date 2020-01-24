@@ -2,21 +2,20 @@
   <v-col :cols="4">
     <v-card>
       <v-card-text>
-          ColorSelector
+        <v-color-picker
+          class="ma-2"
+          show-swatches
+          @input="updateSelectedColor($event)"
+        />
       </v-card-text>
     </v-card>
   </v-col>
 </template>
 
 <script>
-import drawActions from '../mixins/drawActions'
+import colorActions from '../mixins/colorActions'
 
 export default {
-  mixins: [drawActions],
-  methods: {
-    test (text) {
-      console.log(text)
-    }
-  }
+  mixins: [colorActions]
 }
 </script>
