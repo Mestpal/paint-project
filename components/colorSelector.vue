@@ -4,8 +4,9 @@
       <v-card-text>
         <v-color-picker
           class="ma-2"
-          show-swatches
+          :swatches="swatcherColors"
           @input="updateSelectedColor($event)"
+          show-swatches
         />
       </v-card-text>
     </v-card>

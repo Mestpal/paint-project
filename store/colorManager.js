@@ -1,9 +1,13 @@
+import swatcherConf from '@/assets/colors/swatcher-colors'
+
 export const state = () => ({
-  selectedColor: ''
+  selectedColor: '',
+  swatcherColors: swatcherConf.colors
 })
 
 export const getters = {
-  selectedColor: (state) => { return state.selectedColor }
+  selectedColor: (state) => { return state.selectedColor },
+  swatcherColors: (state) => { return state.swatcherColors }
 }
 
 export const mutations = {

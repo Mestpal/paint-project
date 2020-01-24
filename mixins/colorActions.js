@@ -3,7 +3,8 @@ import { mapActions, mapGetters } from 'vuex'
 export default {
   computed: {
     ...mapGetters('colorManager', [
-      'selectedColor'
+      'selectedColor',
+      'swatcherColors'
     ])
   },
   methods: {
