@@ -15,7 +15,7 @@ export const actions = {
   },
   initPath ({ dispatch }, newPointEvent) {
     const path = new paper.Path()
-    path.strokeColor = 'blue'
+    path.strokeColor = newPointEvent.selectedColor
     dispatch('setNewPathPoint', newPointEvent)
   },
   updatePath ({ dispatch }, newPointEvent) {
