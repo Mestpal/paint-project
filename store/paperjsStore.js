@@ -13,20 +13,20 @@ export const actions = {
   setCanvasProject ({ commit }) {
     paper.setup(document.getElementById('paint_project_canvan'))
   },
-  initPath ({ state, commit, dispatch }) {
-    console.log('init path', paper)
+  initPath ({ state, commit, dispatch }, newPointEvent) {
     const path = new paper.Path()
     path.strokeColor = 'blue'
-    console.log('path', path)
-    console.log('created paths', paper.project.activeLayer.children)
+    dispatch('setNewPathPoint', newPointEvent)
   },
-  updatePath ({ commit, dispatch }, newPointEvent) {
+  updatePath ({ dispatch }, newPointEvent) {
+    dispatch('setNewPathPoint', newPointEvent)
+  },
+  setNewPathPoint ({ commit }, newPointEvent) {
     const boundaries = newPointEvent.target.getBoundingClientRect()
     const x = newPointEvent.clientX - boundaries.left
     const y = newPointEvent.clientY - boundaries.top
     const point = new paper.Point([x, y])
-    const path = paper.project.activeLayer.children[0]
+    const path = paper.project.activeLayer.lastChild
     path.add(point)
-    console.log('updatePATH store', newPointEvent, boundaries, point, path)
   }
 }
