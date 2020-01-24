@@ -1,6 +1,7 @@
 <template>
   <v-col :cols="8">
     <v-card>
+      <v-card-title> Canvas </v-card-title>
       <v-card-text>
         <canvas
           id="paint_project_canvan"

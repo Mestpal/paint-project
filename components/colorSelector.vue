@@ -1,16 +1,14 @@
 <template>
-  <v-col :cols="4">
-    <v-card>
-      <v-card-text>
-        <v-color-picker
-          class="ma-2"
-          :swatches="swatcherColors"
-          @input="updateSelectedColor($event)"
-          show-swatches
-        />
-      </v-card-text>
-    </v-card>
-  </v-col>
+  <v-card>
+    <v-card-title> Color Tools </v-card-title>
+    <v-card-text>
+      <v-color-picker
+        :swatches="swatcherColors"
+        @input="updateSelectedColor($event)"
+        show-swatches
+      />
+    </v-card-text>
+  </v-card>
 </template>
 
 <script>
