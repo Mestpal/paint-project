@@ -1,13 +1,22 @@
-// import paper from 'paper'
 import { mapActions } from 'vuex'
 
 export default {
   methods: {
     ...mapActions('paperjsStore', [
-      'updateDrawing'
+      'setCanvasProject',
+      'initPath',
+      'updatePath'
     ]),
-    updateDrawingAction (diameter) {
-      this.updateDrawing(diameter)
+    createDrawPathAction () {
+      this.initPath()
+    },
+    updateDrawPathAction (newPointEvent) {
+      console.log('Add new point')
+      this.updatePath(newPointEvent)
     }
+  },
+  mounted () {
+    this.setCanvasProject()
+    this.initPath()
   }
 }
