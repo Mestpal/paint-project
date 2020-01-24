@@ -1,6 +1,6 @@
 # paint-project
 
-> Small paint like app for Atrapalo Interview
+> Small paint like app
 
 ## Build Setup
 
