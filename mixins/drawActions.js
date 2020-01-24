@@ -1,6 +1,8 @@
 import { mapActions, mapGetters } from 'vuex'
+import colorActions from '../mixins/colorActions'
 
 export default {
+  mixins: [colorActions],
   computed: {
     ...mapGetters('drawingStatus', [
       'drawStatus'
@@ -16,6 +18,7 @@ export default {
       'updatePath'
     ]),
     createDrawPathAction (newPointEvent) {
+      newPointEvent.selectedColor = this.selectedColor
       this.initPath(newPointEvent)
       this.updateDrawStatus(true)
     },
