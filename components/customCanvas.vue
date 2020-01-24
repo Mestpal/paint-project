@@ -1,14 +1,15 @@
 <template>
   <v-card>
-    <canvas
-      id="paint_project_canvan"
-      @click="updateDrawingAction(circleDiameter)"
-      @mousedown="test('mouse pressed')"
-      @mouseup="test('mouse released')"
-      resize
-    >
-      {{ circleDiameter }}
-    </canvas>
+    <v-card-text>
+      <canvas
+        id="paint_project_canvan"
+        @mousedown="updateDrawPathAction($event)"
+        @mouseup="test('mouse released')"
+        style = "height: 100%; width: 100%; background-color: white"
+      >
+        {{ circleDiameter }}
+      </canvas>
+    </v-card-text>
   </v-card>
 </template>
 
@@ -24,9 +25,6 @@ export default {
     }
   },
   data: () => ({ x: 20, y: 20 }),
-  mounted () {
-    this.updateDrawingAction(this.circleDiameter)
-  },
   methods: {
     test (text) {
       console.log(text)

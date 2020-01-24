@@ -1,6 +1,6 @@
 <template>
-  <v-layout column justify-center align-center>
-    <v-flex xs12 sm8 md6>
+  <v-layout justify-center align-center>
+    <v-flex xs12 sm12 md12>
       <customCanvas :circleDiameter="200" />
     </v-flex>
   </v-layout>
