@@ -1,22 +1,35 @@
-import { mapActions } from 'vuex'
+import { mapActions, mapGetters } from 'vuex'
 
 export default {
+  computed: {
+    ...mapGetters('drawingStatus', [
+      'drawStatus'
+    ])
+  },
   methods: {
+    ...mapActions('drawingStatus', [
+      'updateDrawStatus'
+    ]),
     ...mapActions('paperjsStore', [
       'setCanvasProject',
       'initPath',
       'updatePath'
     ]),
-    createDrawPathAction () {
-      this.initPath()
+    createDrawPathAction (newPointEvent) {
+      this.initPath(newPointEvent)
+      this.updateDrawStatus(true)
     },
     updateDrawPathAction (newPointEvent) {
-      console.log('Add new point')
+      if (this.drawStatus) {
+        this.updatePath(newPointEvent)
+      }
+    },
+    closeDrawPathAction (newPointEvent) {
       this.updatePath(newPointEvent)
+      this.updateDrawStatus()
     }
   },
   mounted () {
     this.setCanvasProject()
-    this.initPath()
   }
 }
