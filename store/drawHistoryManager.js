@@ -55,8 +55,10 @@ export const actions = {
   undoLastDrawStep ({ commit }) {
     const drawStepsLenght = paper.project.activeLayer.children.length
     const lastDrawStepPosition = drawStepsLenght - 1
-    paper.project.activeLayer.removeChildren(lastDrawStepPosition)
-    commit('REDUCE_STEPS_POINTER')
+    if (lastDrawStepPosition >= 0) {
+      paper.project.activeLayer.removeChildren(lastDrawStepPosition)
+      commit('REDUCE_STEPS_POINTER')
+    }
   },
   redoLastDrawStep ({ state, commit }) {
     if (state.drawHistory[state.historyStepPointer + 1]) {
