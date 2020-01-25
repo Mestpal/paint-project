@@ -1,12 +1,6 @@
 import { mapActions } from 'vuex'
 
 export default {
-  computed: {
-    // ...mapGetters('colorManager', [
-    //   'selectedColor',
-    //   'swatcherColors'
-    // ])
-  },
   methods: {
     ...mapActions('drawHistoryManager', [
       'undoLastDrawStep',
@@ -18,7 +12,6 @@ export default {
     },
     redoDrawStepAction () {
       this.redoLastDrawStep()
-      console.log('redoDrawStepAction')
     },
     saveDrawHistoy () {
       this.saveDrawStepsHistory()
