@@ -1,13 +1,8 @@
 import { paper } from 'paper'
 
 export const state = () => ({
-  drawHistory: [],
   drawProject: {}
 })
-
-export const getters = {
-  drawHistory: () => { return state.drawHistory }
-}
 
 export const actions = {
   setCanvasProject () {

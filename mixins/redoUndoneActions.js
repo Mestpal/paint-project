@@ -1,4 +1,4 @@
-// import { mapActions, mapGetters } from 'vuex'
+import { mapActions } from 'vuex'
 
 export default {
   computed: {
@@ -8,11 +8,12 @@ export default {
     // ])
   },
   methods: {
-    // ...mapActions('colorManager', [
-    //   'updateSelectedColor'
-    // ]),
+    ...mapActions('drawHistoryManager', [
+      'undoLastDrawStep'
+    ]),
     undoDrawStepAction () {
       console.log('undoDrawStepAction')
+      this.undoLastDrawStep()
     },
     redoDrawStepAction () {
       console.log('redoDrawStepAction')
