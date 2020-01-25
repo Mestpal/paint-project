@@ -1,8 +1,12 @@
 import { mapActions, mapGetters } from 'vuex'
-import colorActions from '../mixins/colorActions'
+import colorActions from '@/mixins/colorActions'
+import redoUndoActions from '@/mixins/redoUndoActions'
 
 export default {
-  mixins: [colorActions],
+  mixins: [
+    colorActions,
+    redoUndoActions
+  ],
   computed: {
     ...mapGetters('drawingStatus', [
       'drawStatus'
@@ -30,6 +34,7 @@ export default {
     closeDrawPathAction (newPointEvent) {
       this.updatePath(newPointEvent)
       this.updateDrawStatus()
+      this.saveDrawHistoy()
     }
   },
   mounted () {
