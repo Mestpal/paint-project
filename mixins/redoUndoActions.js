@@ -9,14 +9,19 @@ export default {
   },
   methods: {
     ...mapActions('drawHistoryManager', [
-      'undoLastDrawStep'
+      'undoLastDrawStep',
+      'redoLastDrawStep',
+      'saveDrawStepsHistory'
     ]),
     undoDrawStepAction () {
-      console.log('undoDrawStepAction')
       this.undoLastDrawStep()
     },
     redoDrawStepAction () {
+      this.redoLastDrawStep()
       console.log('redoDrawStepAction')
+    },
+    saveDrawHistoy () {
+      this.saveDrawStepsHistory()
     }
   }
 }

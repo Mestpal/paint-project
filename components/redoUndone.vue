@@ -25,9 +25,9 @@
 </template>
 
 <script>
-import redoUndoneActions from '../mixins/redoUndoneActions'
+import redoUndoActions from '../mixins/redoUndoActions'
 export default {
-  mixins: [redoUndoneActions],
+  mixins: [redoUndoActions],
   data () {
     return {
       buttonsConf: [
