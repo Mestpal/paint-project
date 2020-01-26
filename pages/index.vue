@@ -8,6 +8,7 @@
         >
           <redoUndone />
           <colorSelector />
+          <lineWeightSelector />
         </v-col>
       </v-row>
     </v-container>
@@ -18,12 +19,14 @@
 import customCanvas from '@/components/customCanvas'
 import colorSelector from '@/components/colorSelector'
 import redoUndone from '@/components/redoUndone'
+import lineWeightSelector from '@/components/lineWeightSelector'
 
 export default {
   components: {
     customCanvas,
     redoUndone,
-    colorSelector
+    colorSelector,
+    lineWeightSelector
   }
 }
 </script>
