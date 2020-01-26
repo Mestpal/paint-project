@@ -32,6 +32,7 @@ export const actions = {
     history.forEach((step, index) => {
       const segmentsHistory = []
       const stepColor = step.strokeColor.components
+      const stepLineWeight = step.strokeWidth
       const segments = step.segments
 
       segments.forEach((segment, idx) => {
@@ -43,7 +44,8 @@ export const actions = {
 
       drawHistory[index] = {
         segments: segmentsHistory,
-        color: stepColor
+        color: stepColor,
+        weight: stepLineWeight
       }
     })
 
@@ -65,6 +67,7 @@ export const actions = {
       const redoStep = state.drawHistory[state.historyStepPointer + 1]
       const path = new paper.Path()
       path.strokeColor = new paper.Color(redoStep.color)
+      path.strokeWidth = redoStep.weight
       redoStep.segments.forEach((pointData) => {
         const point = new paper.Point(pointData)
         path.add(point)

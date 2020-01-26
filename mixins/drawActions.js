@@ -1,11 +1,13 @@
 import { mapActions, mapGetters } from 'vuex'
 import colorActions from '@/mixins/colorActions'
 import redoUndoActions from '@/mixins/redoUndoActions'
+import lineWeightActions from '@/mixins/lineWeightActions'
 
 export default {
   mixins: [
     colorActions,
-    redoUndoActions
+    redoUndoActions,
+    lineWeightActions
   ],
   computed: {
     ...mapGetters('drawingStatus', [
@@ -23,6 +25,7 @@ export default {
     ]),
     createDrawPathAction (newPointEvent) {
       newPointEvent.selectedColor = this.selectedColor
+      newPointEvent.selectedLineWeight = this.selectedLineWeight
       this.initPath(newPointEvent)
       this.updateDrawStatus(true)
     },
