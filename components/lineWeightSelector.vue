@@ -13,7 +13,7 @@
 </template>
 
 <script>
-import lineWeightActions from '@/mixins/lineWeightActions'
+import lineWeightActions from '@/mixins/drawModules/lineWeightActions'
 import lineOption from '@/components/atomics/lineOption'
 
 export default {

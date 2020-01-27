@@ -1,7 +1,7 @@
 import { mapActions, mapGetters } from 'vuex'
-import colorActions from '@/mixins/colorActions'
-import redoUndoActions from '@/mixins/redoUndoActions'
-import lineWeightActions from '@/mixins/lineWeightActions'
+import colorActions from '@/mixins/drawModules/colorActions'
+import redoUndoActions from '@/mixins/drawModules/redoUndoActions'
+import lineWeightActions from '@/mixins/drawModules/lineWeightActions'
 
 export default {
   mixins: [

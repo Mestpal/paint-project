@@ -25,7 +25,7 @@
 </template>
 
 <script>
-import redoUndoActions from '../mixins/redoUndoActions'
+import redoUndoActions from '@/mixins/drawModules/redoUndoActions'
 export default {
   mixins: [redoUndoActions],
   data () {

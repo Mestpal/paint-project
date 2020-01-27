@@ -12,7 +12,7 @@
 </template>
 
 <script>
-import colorActions from '../mixins/colorActions'
+import colorActions from '@/mixins/drawModules/colorActions'
 
 export default {
   mixins: [colorActions]
