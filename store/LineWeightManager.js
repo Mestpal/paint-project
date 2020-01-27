@@ -1,4 +1,4 @@
-import weightsOptions from '@/assets/lines/lines-weights'
+import weightsOptions from '@/config/lines/lines-weights'
 
 export const state = () => ({
   selectedLineWeight: '',

@@ -1,4 +1,4 @@
-import swatcherConf from '@/assets/colors/swatcher-colors'
+import swatcherConf from '@/config/colors/swatcher-colors'
 
 export const state = () => ({
   selectedColor: '',
