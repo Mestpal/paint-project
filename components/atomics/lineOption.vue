@@ -23,7 +23,6 @@ export default {
   },
   methods: {
     lineWeightOptionSelected () {
-      console.log('Line weight selected')
       this.$emit('lineEvent', this.lineConf)
     }
   }
