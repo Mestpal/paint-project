@@ -6,7 +6,7 @@ export const state = () => ({
 })
 
 export const getters = {
-  drawHistory: () => { return state.drawHistory }
+  drawHistory: (state) => { return state.drawHistory }
 }
 
 export const mutations = {
@@ -22,9 +22,6 @@ export const mutations = {
 }
 
 export const actions = {
-  setCanvasProject () {
-    paper.setup(document.getElementById('paint_project_canvan'))
-  },
   saveDrawStepsHistory ({ commit }) {
     const history = paper.project.activeLayer.children
     const drawHistory = []
