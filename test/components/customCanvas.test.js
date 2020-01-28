@@ -5,7 +5,7 @@ import Vuex from 'vuex'
 import { shallowMount, createLocalVue } from '@vue/test-utils'
 
 import customCanvas from '@/components/customCanvas'
-import { getters } from '@/mixins/drawActions'
+import drawActions, { getters } from '@/mixins/drawActions'
 
 Vue.use(Vuetify)
 Vue.use(Vuex)
@@ -20,6 +20,7 @@ describe('customCanvas.vue', () => {
       getters
     })
     wrapper = shallowMount(customCanvas, {
+      mixins: [drawActions],
       store,
       localVue
     })

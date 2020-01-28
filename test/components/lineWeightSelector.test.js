@@ -4,7 +4,7 @@ import Vuex from 'vuex'
 import { shallowMount, createLocalVue } from '@vue/test-utils'
 
 import lineWeightSelector from '@/components/lineWeightSelector'
-import { getters } from '@/mixins/drawModules/lineWeightActions'
+import lineWeightSelectorActions, { getters } from '@/mixins/drawModules/lineWeightActions'
 
 Vue.use(Vuetify)
 Vue.use(Vuex)
@@ -20,7 +20,8 @@ describe('lineWeightSelector.vue', () => {
     })
     wrapper = shallowMount(lineWeightSelector, {
       store,
-      localVue
+      localVue,
+      mixins: [lineWeightSelectorActions]
     })
   })
 
@@ -28,21 +29,11 @@ describe('lineWeightSelector.vue', () => {
     expect(wrapper.html()).toMatchSnapshot()
   })
 
-  // it('method updateLineWeight', () => {
-  //   wrapper = mount(lineWeightSelector, {
-  //     store,
-  //     methods: {
-  //       updateLineWeight () { return jest.fn() }
-  //     },
-  //     localVue
-  //   })
-  //   const event = jest.fn()
-  //   wrapper.vm.$on('lineEvent', event)
+  it('updateLineWeight method', () => {
+    wrapper.vm.updateLineSelectedWeight = jest.fn()
+      .mockImplementation(() => 16)
 
-  //   // const lineOptionComponent = wrapper.find(lineOption)
-  //   // console.log(lineOptionComponent.selector.methods)
-  //   // lineOptionComponent.trigger('lineEvent')
-
-  //   expect(wrapper.vm.updateLineWeight).toHaveBeenCalledTimes(1)
-  // })
+    wrapper.vm.updateLineWeightAction(16)
+    expect(wrapper.vm.updateLineSelectedWeight).toHaveBeenCalledTimes(1)
+  })
 })

@@ -5,7 +5,7 @@ import Vuex from 'vuex'
 import { shallowMount, createLocalVue } from '@vue/test-utils'
 
 import colorSelector from '@/components/colorSelector'
-import { getters } from '@/store/colorManager'
+import colorActions from '@/mixins/drawModules/colorActions'
 
 Vue.use(Vuetify)
 Vue.use(Vuex)
@@ -19,10 +19,10 @@ describe('colorSelector.vue', () => {
   beforeEach(() => {
     state = { swatcherColors: [] }
     store = new Vuex.Store({
-      state,
-      getters
+      state
     })
     wrapper = shallowMount(colorSelector, {
+      mixins: [colorActions],
       store,
       localVue
     })
