@@ -9,11 +9,13 @@ describe('colorManager.js', () => {
 
   it('returs selectedColor', () => {
     const actualSelectedColor = getters.selectedColor(state)
+
     expect(actualSelectedColor).toEqual(state.selectedColor)
   })
 
   it('returs swatcherColors', () => {
     const actualSwatcherColors = getters.swatcherColors(state)
+
     expect(actualSwatcherColors).toEqual(state.swatcherColors)
   })
 
@@ -29,6 +31,7 @@ describe('colorManager.js', () => {
   it('updateSelectedColor action', () => {
     const commit = jest.fn()
     actions.updateSelectedColor({ commit }, colorEvent)
+
     expect(commit).toHaveBeenCalledWith('UPDATE_SELECTED_COLOR', colorEvent)
   })
 })
