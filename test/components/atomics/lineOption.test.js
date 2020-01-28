@@ -34,10 +34,8 @@ describe('lineOption.vue', () => {
 
     expect(event).toHaveBeenCalledTimes(0)
 
-    // Simulate a click on the color
     lineOptionDiv.trigger('click')
 
-    // Ensure that our mock event was called
     expect(event).toHaveBeenCalledTimes(1)
   })
 })
