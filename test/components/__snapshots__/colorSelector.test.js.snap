@@ -1,0 +1,10 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`colorSelector.vue reders the color selector component correctly 1`] = `
+<v-card-stub loaderheight="4" tag="div">
+  <v-card-title-stub> Color Tools </v-card-title-stub>
+  <v-card-text-stub>
+    <v-color-picker-stub canvasheight="150" dotsize="10" mode="rgba" showswatches="true" swatchesmaxheight="150" width="300"></v-color-picker-stub>
+  </v-card-text-stub>
+</v-card-stub>
+`;
