@@ -2,7 +2,7 @@
   <v-layout justify-center align-center>
     <v-container fluid>
       <v-row dense>
-        <customCanvas :circleDiameter="200" />
+        <customCanvas />
         <v-col
           :cols="4"
         >
