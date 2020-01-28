@@ -1,0 +1,8 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`lineWeightSelector.vue reders the line weight selector component correctly 1`] = `
+<v-card-stub loaderheight="4" tag="div">
+  <v-card-title-stub> Line Weight </v-card-title-stub>
+  <v-card-text-stub></v-card-text-stub>
+</v-card-stub>
+`;

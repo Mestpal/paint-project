@@ -1,0 +1,10 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`customCanvas.vue customCanvas component renders correctly 1`] = `
+<v-col-stub cols="8" tag="div">
+  <v-card-stub loaderheight="4" tag="div">
+    <v-card-title-stub> Canvas </v-card-title-stub>
+    <v-card-text-stub><canvas id="paint_project_canvan" style="height: 600px; width: 100%; background-color: white;"></canvas></v-card-text-stub>
+  </v-card-stub>
+</v-col-stub>
+`;

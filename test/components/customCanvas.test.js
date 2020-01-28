@@ -4,31 +4,28 @@ import Vuetify from 'vuetify'
 import Vuex from 'vuex'
 import { shallowMount, createLocalVue } from '@vue/test-utils'
 
-import colorSelector from '@/components/colorSelector'
-import { getters } from '@/store/colorManager'
+import customCanvas from '@/components/customCanvas'
+import { getters } from '@/mixins/drawActions'
 
 Vue.use(Vuetify)
 Vue.use(Vuex)
 const localVue = createLocalVue()
 
-describe('colorSelector.vue', () => {
+describe('customCanvas.vue', () => {
   let store
-  let state
   let wrapper
 
   beforeEach(() => {
-    state = { swatcherColors: [] }
     store = new Vuex.Store({
-      state,
       getters
     })
-    wrapper = shallowMount(colorSelector, {
+    wrapper = shallowMount(customCanvas, {
       store,
       localVue
     })
   })
 
-  it('reders the color selector component correctly', () => {
+  it('customCanvas component renders correctly', () => {
     expect(wrapper.html()).toMatchSnapshot()
   })
 })

@@ -1,0 +1,25 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`redoUndo.vue redoUndo component renders correctly 1`] = `
+<v-card-stub loaderheight="4" tag="div">
+  <v-card-title-stub> Undo/Redo last action </v-card-title-stub>
+  <v-card-text-stub>
+    <v-row-stub tag="div" dense="true">
+      <v-col-stub cols="3" tag="div">
+        <v-btn-stub tag="button" activeclass="" icon="true" type="button">
+          <v-icon-stub large="">
+            mdi-undo
+          </v-icon-stub>
+        </v-btn-stub>
+      </v-col-stub>
+      <v-col-stub cols="3" tag="div">
+        <v-btn-stub tag="button" activeclass="" icon="true" type="button">
+          <v-icon-stub large="">
+            mdi-redo
+          </v-icon-stub>
+        </v-btn-stub>
+      </v-col-stub>
+    </v-row-stub>
+  </v-card-text-stub>
+</v-card-stub>
+`;

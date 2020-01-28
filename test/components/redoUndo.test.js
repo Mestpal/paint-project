@@ -4,31 +4,28 @@ import Vuetify from 'vuetify'
 import Vuex from 'vuex'
 import { shallowMount, createLocalVue } from '@vue/test-utils'
 
-import colorSelector from '@/components/colorSelector'
-import { getters } from '@/store/colorManager'
+import redoUndo from '@/components/redoUndone'
+import { getters } from '@/mixins/drawModules/redoUndoActions'
 
 Vue.use(Vuetify)
 Vue.use(Vuex)
 const localVue = createLocalVue()
 
-describe('colorSelector.vue', () => {
+describe('redoUndo.vue', () => {
   let store
-  let state
   let wrapper
 
   beforeEach(() => {
-    state = { swatcherColors: [] }
     store = new Vuex.Store({
-      state,
       getters
     })
-    wrapper = shallowMount(colorSelector, {
+    wrapper = shallowMount(redoUndo, {
       store,
       localVue
     })
   })
 
-  it('reders the color selector component correctly', () => {
+  it('redoUndo component renders correctly', () => {
     expect(wrapper.html()).toMatchSnapshot()
   })
 })
