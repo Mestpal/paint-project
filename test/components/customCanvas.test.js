@@ -24,9 +24,40 @@ describe('customCanvas.vue', () => {
       store,
       localVue
     })
+    wrapper.vm.initPath = jest.fn()
+      .mockImplementation(() => {})
+    wrapper.vm.updateDrawStatus = jest.fn()
+      .mockImplementation(() => {})
+    wrapper.vm.updatePath = jest.fn()
+      .mockImplementation(() => {})
   })
 
   it('customCanvas component renders correctly', () => {
     expect(wrapper.html()).toMatchSnapshot()
   })
+
+  it('createDrawPathAction action', () => {
+    wrapper.vm.createDrawPathAction({
+      selectedColor: '#FFFFFF',
+      selectedLineWeight: 2
+    })
+
+    expect(wrapper.vm.initPath).toHaveBeenCalledTimes(1)
+    expect(wrapper.vm.updateDrawStatus).toHaveBeenCalledTimes(1)
+  })
+
+  it('closeDrawPathAction action', () => {
+    wrapper.vm.saveDrawHistoy = jest.fn()
+      .mockImplementation(() => {})
+
+    wrapper.vm.closeDrawPathAction({
+      selectedColor: '#FFFFFF',
+      selectedLineWeight: 2
+    })
+
+    expect(wrapper.vm.updatePath).toHaveBeenCalledTimes(1)
+    expect(wrapper.vm.updateDrawStatus).toHaveBeenCalledTimes(1)
+    expect(wrapper.vm.saveDrawHistoy).toHaveBeenCalledTimes(1)
+  })
+
 })

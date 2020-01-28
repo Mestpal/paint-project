@@ -31,4 +31,11 @@ describe('colorSelector.vue', () => {
   it('reders the color selector component correctly', () => {
     expect(wrapper.html()).toMatchSnapshot()
   })
+
+  it('Update Color Action', () => {
+    wrapper.vm.updateSelectedColor = jest.fn()
+      .mockImplementation(() => {})
+    wrapper.vm.updateColorAction()
+    expect(wrapper.vm.updateSelectedColor).toHaveBeenCalled()
+  })
 })
