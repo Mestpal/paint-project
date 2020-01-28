@@ -23,7 +23,6 @@ export default {
   mixins: [lineWeightActions],
   methods: {
     updateLineWeight (lineEvent) {
-      console.log(`Update the line weight to ${lineEvent.weight}`)
       this.updateLineWeightAction(lineEvent)
     }
   }
