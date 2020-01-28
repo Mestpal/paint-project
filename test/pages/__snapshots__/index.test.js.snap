@@ -1,0 +1,16 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`index.vue page reders the color selector component correctly 1`] = `
+<v-layout-stub tag="div" justify-center="" align-center="">
+  <v-container-stub tag="div" fluid="true">
+    <v-row-stub tag="div" dense="true">
+      <customcanvas-stub></customcanvas-stub>
+      <v-col-stub cols="4" tag="div">
+        <redoundone-stub></redoundone-stub>
+        <colorselector-stub></colorselector-stub>
+        <lineweightselector-stub></lineweightselector-stub>
+      </v-col-stub>
+    </v-row-stub>
+  </v-container-stub>
+</v-layout-stub>
+`;
