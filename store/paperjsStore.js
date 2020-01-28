@@ -1,7 +1,6 @@
 import { paper } from 'paper'
 
 export const state = () => ({
-  drawProject: {},
   defaults: {
     line: {
       weight: 1,
