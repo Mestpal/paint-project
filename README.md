@@ -23,6 +23,9 @@ $ npm run start
 
 # generate static project
 $ npm run generate
+
+# run tests
+$ npm run test
 ```
 
 ## Project Structure
