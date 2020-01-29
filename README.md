@@ -37,3 +37,15 @@ The project structure follows the structure given by a new nuxt project with som
 
 - **mixins**:
     Here you can find some js files with the common code used by other files, thanks to mixins we can write code in one place and use it in many other places.
+
+- **layout**
+    It is where you can find the HTML common to all the pages or the selected ones. In this project we only have one page and one layout
+
+- **pages**
+    Nuxt will take all the vue files paths inside this folder as routes and will do its route magic only with that. Here we only have the index page so the root route will be the one aill work
+
+- **store**
+    Here we can find the stores, seme ones that Vuex uses, but here we only need to export and export the state, getters, mutations and actions and no more. Thank to this stores we can control the variables status allong all the components.
+
+- **test**
+    Here you can find some test made with Jest. This is not my stroggest asset so this part can be improved a lot.
