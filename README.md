@@ -1,8 +1,8 @@
 # paint-project
 
-> Small paint like app, using the [Nuxt](https://nuxtjs.org/) framework (a Vue.js framework) and the vector graphics scripting framework [paperjs](http://paperjs.org/) which works on top of the HTML5 Canvas.
+![image-paint-app](https://raw.githubusercontent.com/Mestpal/paint-project/master/assets/Screenshot_2020-01-29%20paint-project%20-%20paint-project.png)
 
-Also it will use the UI framework [Vuetify](https://vuetifyjs.com/en/), so this paint-project will use some of Vuetify components to avoid some Vue component development, specially the atomic ones, and for the default layout
+Small paint like app, using the [Nuxt](https://nuxtjs.org/) framework (a Vue.js framework) and the vector graphics scripting framework [paperjs](http://paperjs.org/) which works on top of the HTML5 Canvas. Also it will use the UI framework [Vuetify](https://vuetifyjs.com/en/), so this paint-project will use some of Vuetify components to avoid some Vue component development, specially the atomic ones, and for the default layout
 
 ## Build Setup
 
